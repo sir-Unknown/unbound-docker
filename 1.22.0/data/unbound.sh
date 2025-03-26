@@ -391,10 +391,11 @@ remote-control:
 EOT
 fi
 
-mkdir -p /opt/unbound/etc/unbound/dev && \
+mkdir -p /opt/unbound/etc/unbound/dev/random && \
 mount --bind -n /dev/random /opt/unbound/etc/unbound/dev/random && \
 mount --bind -n /dev/urandom /opt/unbound/etc/unbound/dev/urandom && \
 mount --bind -n /dev/null /opt/unbound/etc/unbound/dev/null
+
 #cp -a /dev/random /dev/urandom /dev/null /opt/unbound/etc/unbound/dev/
 
 mkdir -p -m 700 /opt/unbound/etc/unbound/var && \
